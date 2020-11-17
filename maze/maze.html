@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Maze</title>
+        <script src="maze.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+        <link rel="stylesheet" href="maze.css">
+       </head>
+    <body onload="init()">
+        <div class="container">
+            <header class="navbar">
+                <section class="navbar-section">
+                  <a href="#" class="navbar-brand mr-2">Maze</a>
+                  <a href="#" class="btn btn-link">Github</a>
+                  <a href="https://github.com/zilinglius/maze" class="btn btn-link">Original Version</a>
+                </section>
+            </header>
+            <div id="main" class="columns">
+                <div id="content" class="column col-11 col-mx-auto col-text-center">
+                    <div class="columns">
+                        <div class="column col-2">
+                            <div class="input-group">
+                                <span class="input-group-addon addon-sm">
+                                    <i class="icon icon-menu" style="transform: rotate(90deg);"></i>
+                                    Columns
+                                </span>
+                                <input id="cols" class="form-input input-sm" type="number" placeholder="90" value="90">
+                            </div>
+                        </div>
+                        <div class="column col-2">
+                            <div class="input-group">
+                                <span class="input-group-addon addon-sm">
+                                    <i class="icon icon-menu"></i>
+                                    Rows
+                                </span>
+                                <input id="rows" class="form-input input-sm" type="number" placeholder="30" value="30">
+                            </div>
+                        </div>
+                        <div class="column col-2">
+                            <div class="input-group">
+                                <span class="input-group-addon addon-sm">
+                                    <i class="icon icon-apps"></i>
+                                    Density
+                                </span>
+                                <input id="density" class="form-input input-sm" type="number" placeholder="60" value="60" disabled>
+                            </div>
+                        </div>
+                        <div class="column col-2">
+                            <div class="input-group">
+                                <span class="input-group-addon addon-sm">Type</span>
+                                <select id="sltType" class="form-select select-sm" onchange="onSltType()">
+                                    <option>Maze1</option>
+                                    <option>Maze2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="column col-2">
+                            <div class="input-group">
+                                <label class="form-switch input-sm">
+                                    <input id="chkAnimated" type="checkbox" class="input-sm" name="maze" checked><i class="form-icon"></i>Animated
+                                </label>
+                            </div>
+                        </div>
+                        <div class="column col-2">
+                            <div class="btn-group btn-group-block">
+                                <button id="btnCreateMaze" class="btn btn-sm btn-primary input-group-btn" onclick="onCreate()">
+                                    <i class="icon icon-check"></i>
+                                    Create
+                                </button>
+                                <button id="btnClear" class="btn btn-sm input-group-btn" onclick="onClear()">
+                                    <i class="icon icon-refresh"></i>
+                                    Clear
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="maze columns">
+                        <div id="maze1" class="column col-6"></div>
+                        <div id="maze2" class="column col-6"></div>
+                    </div>
+                    <div id="footer" class="column col-12">&copy; Copyright 2020</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

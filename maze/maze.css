@@ -1,0 +1,13 @@
+.navbar {
+    padding: 5px 10px;
+}
+.navbar-brand {
+    font-weight: bold;
+}
+.maze {
+    margin-top: 10px;
+}
+.col-text-center{text-align: center;}
+#footer {
+    color: #969696;
+}
